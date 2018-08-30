@@ -9,18 +9,7 @@ and is set to automatically reload configuration files.
 The input filter is `http` and port 8080 is shared with the host, so test lines can be
 sent from the docker host to Logstash with curl.
 
-You can run the container with `make`.
-
-If you do not have make, you can run the container with:
-
-```
-docker run \
-    -v $PWD/pipeline:/usr/share/logstash/pipeline/ \
-    -e XPACK_MONITORING_ENABLED=false \
-    -e CONFIG_RELOAD_AUTOMATIC=true \
-    -p 8080:8080 \
-    elastic/logstash:6.3.2
-```
+You can run the container with `make` or `./run.sh`
 
 # Example
 
